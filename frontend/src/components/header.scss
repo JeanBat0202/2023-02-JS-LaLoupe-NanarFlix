@@ -1,0 +1,168 @@
+.header-container {
+  header {
+    display: flex;
+    justify-content: center;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    align-items: center;
+    padding: 1rem 0;
+    background: #f7d7b9;
+
+    .turnip-logo {
+      width: 4rem;
+      position: absolute;
+      left: 7.8rem;
+      top: -1rem;
+    }
+
+    .header-logo {
+      font-weight: 800;
+      font-size: 2.3rem;
+      line-height: 2.25rem;
+      display: flex;
+      position: absolute;
+      z-index: 10;
+      cursor: pointer;
+    }
+    li {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 50%;
+      width: 48px;
+      height: 48px;
+      cursor: pointer;
+    }
+  }
+  .hamburger {
+    z-index: 13;
+    background-image: url("/src/assets/icons/hamburger-icon.svg");
+  }
+  .search {
+    margin-right: auto;
+    background-image: url("/src/assets/icons/search-icon.svg");
+  }
+  .account {
+    margin-left: auto;
+    background-image: url("https://avataaars.io/?avatarStyle=Transparent&topType=LongHairBob&accessoriesType=Prescription02&hairColor=Red&facialHairType=MoustacheMagnum&facialHairColor=BlondeGolden&clotheType=GraphicShirt&clotheColor=White&graphicType=Deer&eyeType=Squint&eyebrowType=FlatNatural&mouthType=Serious&skinColor=DarkBrown");
+  }
+
+  .header-icons {
+    display: flex;
+    width: 100%;
+    position: relative;
+    justify-content: space-between;
+  }
+
+  .header-menu {
+    z-index: 11;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: linear-gradient(#fcecb0, #aa6cd3);
+    width: 100%;
+    text-align: center;
+    padding-top: 10px;
+    line-height: 5;
+    height: 100vh;
+    font-size: 1.75rem;
+    line-height: 5rem;
+    // .nav.profil {
+    //   display: none;
+    // }
+  }
+
+  .header-search {
+    z-index: 11;
+    position: absolute;
+    top: calc(48px + 2rem);
+    left: 0;
+    background: #f7d7b9;
+    width: 100%;
+    padding-bottom: 20px;
+  }
+
+  .inputSearch {
+    width: 100%;
+    padding: 0.5rem;
+    border: 2px solid rgb(243, 244, 246);
+    border-radius: 7px 0 0 7px;
+  }
+
+  .buttonSearch {
+    width: 100%;
+    background-color: #9eba9b;
+    color: white;
+    padding: 0.5rem;
+    border-radius: 0 7px 7px 0;
+  }
+
+  .search-container {
+    li {
+      width: 80rem;
+      padding-top: 13px;
+    }
+    li:hover {
+      background-color: #9eba9b;
+    }
+  }
+
+  @media screen and (min-width: 480px) {
+    header {
+      padding: 2rem 0;
+
+      .turnip-logo {
+        width: 7rem;
+        position: absolute;
+        left: 9.3rem;
+        top: -2.8rem;
+      }
+
+      .header-logo {
+        font-size: 3rem;
+      }
+    }
+    .header-icons {
+      gap: 1rem;
+      margin: 0 1rem;
+    }
+    .icon {
+      background-size: 60%;
+    }
+    .header-menu {
+      font-size: 2rem;
+      line-height: 6rem;
+    }
+    .header-search {
+      top: calc(48px + 4rem);
+    }
+    .inputSearch {
+      width: 80%;
+    }
+    .buttonSearch {
+      width: 20%;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    header {
+      padding: 2.5rem 0;
+    }
+    .header-icons {
+      gap: 2rem;
+      max-width: 1280px;
+    }
+    .icon {
+      background-size: 80%;
+    }
+    .header-menu {
+      font-size: 2.25rem;
+      line-height: 7rem;
+    }
+    .header-search {
+      top: calc(48px + 5rem);
+    }
+    .search-container {
+      max-width: 1280px;
+      margin: auto;
+    }
+  }
+}

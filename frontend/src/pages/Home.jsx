@@ -1,36 +1,17 @@
-import Counter from "../components/Counter";
-import logo from "../assets/logo.svg";
+import Carrousel from "@components/Carrousel.jsx";
+import MovieSection from "@components/MovieSection";
+import SerieSection from "@components/SerieSection";
+import CritiqueSection from "@components/CritiqueSection";
 
 export default function Home() {
   return (
-    <header className="App-header">
-      <img src={logo} className="App-logo" alt="logo" />
-      <p>Hello Vite + React !</p>
-
-      <Counter />
-
-      <p>
-        Edit <code>App.jsx</code> and save to test HMR updates.
-      </p>
-      <p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        {" | "}
-        <a
-          className="App-link"
-          href="https://vitejs.dev/guide/features.html"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Vite Docs
-        </a>
-      </p>
-    </header>
+    <main className="min-h-screen">
+      <Carrousel />
+      <div className="md:grid md:grid-cols-2  md:grid-flow-row md:grid-">
+        <MovieSection />
+        <SerieSection />
+      </div>
+      <CritiqueSection />
+    </main>
   );
 }

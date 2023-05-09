@@ -1,6 +1,7 @@
-const path = require("path");
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
+
+const path = require("path");
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -13,4 +14,5 @@ export default defineConfig({
       "@services": path.resolve(__dirname, "src/services"),
     },
   },
+  base: "/",
 });
